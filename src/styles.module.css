@@ -823,7 +823,7 @@
   .embed.embed-inline {
     padding: 0;
     margin: 4px 0;
-    border-radius: 3px
+    border-radius: 3px;
   }
 
   .embed .image,
@@ -941,8 +941,6 @@
   }
 
   .embed .embed-fields .embed-field {
-    -webkit-box-flex: 0;
-    -ms-flex: 0;
     flex: 0;
     padding-top: 10px;
     min-width: 100%;
@@ -950,12 +948,9 @@
   }
 
   .embed .embed-fields .embed-field.embed-field-inline {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-width: 150px;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto
+    flex: 1 0 33.33333%;
+    min-width: unset;
+    max-width: unset;
   }
 
   .embed .embed-fields .embed-field .embed-field-name {
@@ -1013,7 +1008,7 @@
     flex-direction: row
   }
 
-  
+
   .flex-horizontal>.flex-spacer {
     min-width: 1px
   }
@@ -1137,7 +1132,7 @@
   }
 
 /****************
-    index.css   
+    index.css
 ****************/
 
   @font-face {

@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import styles from '../styles.module.css'
-import { parseAllowLinks, parseEmbedTitle } from './markdown'
+import { parseAllowLinks, parseEmbedTitle } from './Markdown'
 
 export default ({ name, value, inline = false }) => {
   const classNames = [styles['embed-field']]
