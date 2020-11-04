@@ -1,0 +1,14 @@
+.content {
+	padding: 32px;
+}
+
+.content h1 {
+	margin: 0;
+}
+.content h3 {
+	margin-bottom: 16px;
+}
+
+.content > .item.custom > div {
+	padding: 20px;
+}
