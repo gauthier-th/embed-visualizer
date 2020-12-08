@@ -44,7 +44,11 @@ export default class Example extends Component {
 }
 ```
 
+## Preview
+
+![Embed preview](https://user-images.githubusercontent.com/37781713/101478922-ad721080-3951-11eb-8395-06dcd334cea3.png)
 ## License
 
 MIT © [gauthier-th](https://github.com/gauthier-th)
+
 Created from [embed-visualizer](https://github.com/leovoel/embed-visualizer)
