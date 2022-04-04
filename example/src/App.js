@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import EmbedVisualizer, { parseContent, parseTitle } from 'embed-visualizer'
+import { EmbedVisualizer, parseContent, parseTitle } from 'embed-visualizer'
 import 'embed-visualizer/dist/index.css'
 
 const embed = {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import Ajv from 'ajv'
 import {
@@ -82,11 +81,6 @@ class App extends Component {
     // but for now that's what we do.
     this.setState({ input, data, error })
   }
-}
-
-App.propTypes = {
-  embed: PropTypes.object.isRequired,
-  onError: PropTypes.func
 }
 
 export default App

@@ -43,6 +43,7 @@ export interface DiscordEmbed {
 
 export interface EmbedVisualizerProps {
   embed: DiscordEmbed;
+  onError: (error: string) => void;
 }
 
 declare class EmbedVisualizer extends Component<EmbedVisualizerProps> {}
