@@ -1,6 +1,6 @@
 {
   "name": "embed-visualizer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A React Component to render Discord-like embeds",
   "author": "gauthier-th",
   "license": "MIT",
