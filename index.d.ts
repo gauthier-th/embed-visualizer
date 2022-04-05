@@ -43,11 +43,10 @@ export interface DiscordEmbed {
 
 export interface EmbedVisualizerProps {
   embed: DiscordEmbed;
-  onError: (error: string) => void;
+  onError?: (error: string) => void;
 }
 
-declare class EmbedVisualizer extends Component<EmbedVisualizerProps> {}
-export default EmbedVisualizer
+export declare class EmbedVisualizer extends Component<EmbedVisualizerProps> {}
 
-export function parseTitle(input: string): ReactElement;
-export function parseContent(input: string): ReactElement;
+export declare function parseTitle(input: string): ReactElement;
+export declare function parseContent(input: string): ReactElement;
