@@ -1,4 +1,8 @@
-.bot-tag {
+  :global(.embed-visualizer) {
+    font-size: 13.6px;
+  }
+  
+  .bot-tag {
     background: #7289da;
     font-size: 10px;
     font-weight: 600;
@@ -210,6 +214,7 @@
   }
 
   .theme-dark .hljs,
+  :global(.embed-visualizer) .hljs,
   .theme-light .hljs {
     display: block;
     overflow-x: auto;
@@ -218,11 +223,13 @@
   }
 
   .theme-dark .hljs-emphasis,
+  :global(.embed-visualizer) .hljs-emphasis,
   .theme-light .hljs-emphasis {
     font-style: italic
   }
 
   .theme-dark .hljs-strong,
+  :global(.embed-visualizer)  .hljs-strong,
   .theme-light .hljs-strong {
     font-weight: 700
   }
@@ -295,13 +302,18 @@
   }
 
   .theme-dark .hljs-comment,
-  .theme-dark .hljs-quote {
+  .theme-dark .hljs-quote,
+  :global(.embed-visualizer) .hljs-comment,
+  :global(.embed-visualizer) .hljs-quote {
     color: #586e75
   }
 
   .theme-dark .hljs-addition,
   .theme-dark .hljs-keyword,
-  .theme-dark .hljs-selector-tag {
+  .theme-dark .hljs-selector-tag,
+  :global(.embed-visualizer) .hljs-addition,
+  :global(.embed-visualizer) .hljs-keyword,
+  :global(.embed-visualizer) .hljs-selector-tag {
     color: #859900
   }
 
@@ -310,7 +322,13 @@
   .theme-dark .hljs-meta .hljs-meta-string,
   .theme-dark .hljs-number,
   .theme-dark .hljs-regexp,
-  .theme-dark .hljs-string {
+  .theme-dark .hljs-string,
+  :global(.embed-visualizer) .hljs-doctag,
+  :global(.embed-visualizer) .hljs-literal,
+  :global(.embed-visualizer) .hljs-meta .hljs-meta-string,
+  :global(.embed-visualizer) .hljs-number,
+  :global(.embed-visualizer) .hljs-regexp,
+  :global(.embed-visualizer) .hljs-string {
     color: #2aa198
   }
 
@@ -318,7 +336,12 @@
   .theme-dark .hljs-section,
   .theme-dark .hljs-selector-class,
   .theme-dark .hljs-selector-id,
-  .theme-dark .hljs-title {
+  .theme-dark .hljs-title,
+  :global(.embed-visualizer) .hljs-name,
+  :global(.embed-visualizer) .hljs-section,
+  :global(.embed-visualizer) .hljs-selector-class,
+  :global(.embed-visualizer) .hljs-selector-id,
+  :global(.embed-visualizer) .hljs-title {
     color: #268bd2
   }
 
@@ -327,7 +350,13 @@
   .theme-dark .hljs-class .hljs-title,
   .theme-dark .hljs-template-variable,
   .theme-dark .hljs-type,
-  .theme-dark .hljs-variable {
+  .theme-dark .hljs-variable,
+  :global(.embed-visualizer) .hljs-attr,
+  :global(.embed-visualizer) .hljs-attribute,
+  :global(.embed-visualizer) .hljs-class .hljs-title,
+  :global(.embed-visualizer) .hljs-template-variable,
+  :global(.embed-visualizer) .hljs-type,
+  :global(.embed-visualizer) .hljs-variable {
     color: #b58900
   }
 
@@ -338,16 +367,27 @@
   .theme-dark .hljs-selector-attr,
   .theme-dark .hljs-selector-pseudo,
   .theme-dark .hljs-subst,
-  .theme-dark .hljs-symbol {
+  .theme-dark .hljs-symbol,
+  :global(.embed-visualizer) .hljs-bullet,
+  :global(.embed-visualizer) .hljs-link,
+  :global(.embed-visualizer) .hljs-meta,
+  :global(.embed-visualizer) .hljs-meta .hljs-keyword,
+  :global(.embed-visualizer) .hljs-selector-attr,
+  :global(.embed-visualizer) .hljs-selector-pseudo,
+  :global(.embed-visualizer) .hljs-subst,
+  :global(.embed-visualizer) .hljs-symbol {
     color: #cb4b16
   }
 
   .theme-dark .hljs-built_in,
-  .theme-dark .hljs-deletion {
+  .theme-dark .hljs-deletion,
+  :global(.embed-visualizer) .hljs-built_in,
+  :global(.embed-visualizer) .hljs-deletion {
     color: #dc322f
   }
 
-  .theme-dark .hljs-formula {
+  .theme-dark .hljs-formula,
+  :global(.embed-visualizer) .hljs-formula {
     background: #073642
   }
 
@@ -651,68 +691,95 @@
     word-break: break-all
   }
 
-  .theme-dark .message-group h2 strong {
+  .theme-dark h2 strong,
+  :global(.embed-visualizer) h2 strong {
     color: #fff
   }
 
-  .theme-dark .message-group h2 span {
+  .theme-dark h2 span,
+  :global(.embed-visualizer) h2 span {
     color: hsla(0, 0%, 100%, .2)
   }
 
-  .theme-dark .message-group a {
-    color: #0096d1
+  .theme-dark a,
+  :global(.embed-visualizer) a {
+    color: #00aff4;
   }
 
-  .theme-dark .message-group .comment .markup {
+  .theme-dark .comment .markup,
+  :global(.embed-visualizer) .comment .markup {
     color: hsla(0, 0%, 100%, .7)
   }
 
-  .theme-dark .message-group .comment .markup pre {
-    background: #2e3136;
+  .theme-dark .comment .markup pre,
+  :global(.embed-visualizer) .comment .markup pre {
+    background: #2F3136;
     border-color: #282b30
   }
 
-  .theme-dark .message-group .comment .markup code.inline,
-  .theme-dark .message-group .comment .markup pre code {
-    background: #2e3136
+  .theme-dark .comment .markup code.inline,
+  .theme-dark .comment .markup pre code,
+  :global(.embed-visualizer) code.inline,
+  :global(.embed-visualizer) pre code {
+    background: #202225;
+    color: #b9bbbe;
+    font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
   }
 
-  .theme-dark .message-group.compact .message .markup .user-name {
-    color: #f9f9f9
+  .theme-dark .comment .markup pre code,
+  :global(.embed-visualizer) pre code {
+    font-size: 14px;
   }
 
-  .theme-dark .message-group.compact .timestamp {
+  .theme-dark.compact .message .markup .user-name,
+  :global(.embed-visualizer).compact .message .markup .user-name {
+    color: #f9f9f9;
+  }
+
+  .theme-dark.compact .timestamp,
+  :global(.embed-visualizer).compact .timestamp {
     color: hsla(0, 0%, 100%, .2)
   }
 
-  .theme-dark .message-group .embed-wrapper .embed-color-pill {
+  .theme-dark .embed-wrapper .embed-color-pill,
+  :global(.embed-visualizer) .embed-wrapper .embed-color-pill {
     background-color: #4f545c
   }
 
-  .theme-dark .message-group .embed {
-    background-color: #36393e;
+  .theme-dark .embed,
+  :global(.embed-visualizer) .embed {
+    background-color: #2F3136;
     border-color: rgba(46, 48, 54, .6)
   }
 
-  .theme-dark .message-group .embed .embed-footer,
-  .theme-dark .message-group .embed .embed-provider {
-    color: hsla(0, 0%, 100%, .6)
+  .theme-dark .embed .embed-footer,
+  .theme-dark .embed .embed-provider,
+  :global(.embed-visualizer) .embed .embed-footer,
+  :global(.embed-visualizer) .embed .embed-provider {
+    color: #dcddde;
   }
 
-  .theme-dark .message-group .embed .embed-author-name {
+  .theme-dark .embed .embed-author-name,
+  .theme-dark .embed .embed-author-url,
+  :global(.embed-visualizer) .embed .embed-author-name,
+  :global(.embed-visualizer) .embed .embed-author-url {
     color: #fff!important
   }
 
-  .theme-dark .message-group .embed div.embed-title {
+  .theme-dark .embed div.embed-title,
+  :global(.embed-visualizer) .embed div.embed-title {
     color: #fff
   }
 
-  .theme-dark .message-group .embed .embed-description,
-  .theme-dark .message-group .embed .embed-fields {
-    color: hsla(0, 0%, 100%, .6)
+  .theme-dark .embed .embed-description,
+  .theme-dark .embed .embed-fields,
+  :global(.embed-visualizer) .embed .embed-description,
+  :global(.embed-visualizer) .embed .embed-fields {
+    color: #dcddde;
   }
 
-  .theme-dark .message-group .embed .embed-fields .embed-field-name {
+  .theme-dark .embed .embed-fields .embed-field-name,
+  :global(.embed-visualizer) .embed .embed-fields .embed-field-name {
     color: #fff
   }
 
@@ -978,6 +1045,10 @@
     margin: 0
   }
 
+  :global(.embed-visualizer) pre {
+    font-size: 12px;
+  }
+
   .comment>:last-child .embed {
     margin-bottom: auto
   }
@@ -1031,24 +1102,32 @@
     align-items: center
   }
 
-  .theme-dark .chat {
+  .theme-dark .chat,
+  :global(.embed-visualizer) .chat {
     background-color: #36393e
   }
 
   .theme-dark .chat>.content,
   .theme-dark .friends-table,
-  .theme-dark .messages-wrapper {
+  .theme-dark .messages-wrapper,
+  :global(.embed-visualizer) .chat>.content,
+  :global(.embed-visualizer) .friends-table,
+  :global(.embed-visualizer) .messages-wrapper {
     background-color: #36393e
   }
 
   .theme-dark .friends-table .scroller-wrap::-webkit-scrollbar-thumb,
-  .theme-dark .messages-wrapper .scroller-wrap::-webkit-scrollbar-thumb {
+  .theme-dark .messages-wrapper .scroller-wrap::-webkit-scrollbar-thumb,
+  :global(.embed-visualizer) .friends-table .scroller-wrap::-webkit-scrollbar-thumb,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap::-webkit-scrollbar-thumb {
     background-color: #1e2124;
     border-color: #36393e
   }
 
   .theme-dark .friends-table .scroller-wrap::-webkit-scrollbar-track-piece,
-  .theme-dark .messages-wrapper .scroller-wrap::-webkit-scrollbar-track-piece {
+  .theme-dark .messages-wrapper .scroller-wrap::-webkit-scrollbar-track-piece,
+  :global(.embed-visualizer) .friends-table .scroller-wrap::-webkit-scrollbar-track-piece,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap::-webkit-scrollbar-track-piece {
     background-color: #2e3136;
     border-color: #36393e
   }
@@ -1056,23 +1135,33 @@
   .theme-dark .friends-table .scroller-wrap.polyfill .scrollbar,
   .theme-dark .friends-table .scroller-wrap.polyfill .scrollbar:after,
   .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar,
-  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar:after {
+  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar:after,
+  :global(.embed-visualizer) .friends-table .scroller-wrap.polyfill .scrollbar,
+  :global(.embed-visualizer) .friends-table .scroller-wrap.polyfill .scrollbar:after,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap.polyfill .scrollbar,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap.polyfill .scrollbar:after {
     background-color: #36393e
   }
 
   .theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .thumb,
-  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb {
+  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb,
+  :global(.embed-visualizer) .friends-table .scroller-wrap.polyfill .scrollbar .thumb,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb {
     background-color: #36393e;
     border-color: #36393e
   }
 
   .theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .thumb:after,
-  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb:after {
+  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb:after,
+  :global(.embed-visualizer) .friends-table .scroller-wrap.polyfill .scrollbar .thumb:after,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap.polyfill .scrollbar .thumb:after {
     background-color: #1e2124
   }
 
   .theme-dark .friends-table .scroller-wrap.polyfill .scrollbar .track,
-  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .track {
+  .theme-dark .messages-wrapper .scroller-wrap.polyfill .scrollbar .track,
+  :global(.embed-visualizer) .friends-table .scroller-wrap.polyfill .scrollbar .track,
+  :global(.embed-visualizer) .messages-wrapper .scroller-wrap.polyfill .scrollbar .track {
     background-color: #2e3136;
     border-color: #36393e
   }

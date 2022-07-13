@@ -6,7 +6,7 @@ export default ({ color }) => {
     <div
       className={styles['embed-color-pill']}
       style={{
-        backgroundColor: color ? '#' + color.toString(16) : '#4f545c'
+        backgroundColor: color ? '#' + color.toString(16) : '#202225'
       }}
     />
   )
