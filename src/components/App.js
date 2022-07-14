@@ -20,8 +20,10 @@ export default function EmbedVisualizer({ embed, onError }) {
   const data = useMemo(() => {
     const { data, error } = validateInput(embed)
     if (error || !data) {
-      setError(error || 'Invalid input. Please check your syntax.')
-      onError(error || 'Invalid input. Please check your syntax.')
+      const errorMessage = error ? `Invalid embed: ${error}` : 'Invalid embed. Please check your syntax.'
+      setError(errorMessage)
+      if (onError) onError(errorMessage)
+      else throw new Error(errorMessage)
       return null
     }
     return data

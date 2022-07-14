@@ -21,7 +21,7 @@ import 'embed-visualizer/dist/index.css'
 const embed = {
   embed: {
     title: "Embed title",
-    description: "👌 this supports [named links](https://discordapp.com), __**markdown**__ and `inline code`. ```\nyes, even code blocks```||you can also use spoilers||"
+    description: ""
   }
 }
 
@@ -30,7 +30,7 @@ export default class Example extends Component {
     return <div className='content'>
       <div className='item'>
         <h1>Classic embed:</h1>
-        <EmbedVisualizer embed={embed} />
+        <EmbedVisualizer embed={embed} onError={(e) => console.error("Error while parsing embed:", e)} />
       </div>
       <div className='item custom' style={{ maxWidth: 520 }}>
         <h1>Custom content parsing:</h1>
