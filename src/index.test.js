@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { EmbedVisualizer } from '.'
 
-describe('ExampleComponent', () => {
+describe('EmbedVisualizer', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(EmbedVisualizer).toBeTruthy()
   })
 })

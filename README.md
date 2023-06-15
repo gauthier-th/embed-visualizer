@@ -2,7 +2,7 @@
 
 A React Component to render Discord-like embeds.
 
-[![NPM](https://img.shields.io/npm/v/embed-visualizer.svg)](https://www.npmjs.com/package/embed-visualizer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/embed-visualizer.svg)](https://www.npmjs.com/package/embed-visualizer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![npm bundle size](https://img.shields.io/bundlephobia/min/embed-visualizer) ![npm](https://img.shields.io/npm/dt/embed-visualizer) ![GitHub](https://img.shields.io/github/license/gauthier-th/embed-visualizer)
 
 ## Install
 
@@ -21,7 +21,7 @@ import 'embed-visualizer/dist/index.css'
 const embed = {
   embed: {
     title: "Embed title",
-    description: ""
+    description: "👌 this supports [named links](https://discordapp.com), __**markdown**__ and `inline code`. ```\nyes, even code blocks```||you can also use spoilers||"
   }
 }
 

@@ -6,7 +6,7 @@ import 'embed-visualizer/dist/index.css'
 const embed = {
   embed: {
     title: "Embed title",
-    description: ""
+    description: "👌 this supports [named links](https://discordapp.com), __**markdown**__ and `inline code`. ```\nyes, even code blocks```||you can also use spoilers||"
   }
 }
 
