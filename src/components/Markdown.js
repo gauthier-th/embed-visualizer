@@ -97,7 +97,7 @@ function getEmojiURL(surrogate) {
   try {
     // we could link to discord's cdn, but there's a lot of these
     // and i'd like to minimize the amount of data we need directly from them
-    return `https://twemoji.maxcdn.com/v/latest/svg/${Twemoji.convert.toCodePoint(
+    return `https://cdn.jsdelivr.net/npm/@twemoji/svg@latest/${Twemoji.convert.toCodePoint(
       surrogate
     )}.svg`
   } catch (error) {
@@ -243,14 +243,14 @@ const baseRules = {
       const surrogate = convertNameToSurrogate(name)
       return surrogate
         ? {
-            name: `:${name}:`,
-            surrogate,
-            src: getEmojiURL(surrogate)
-          }
+          name: `:${name}:`,
+          surrogate,
+          src: getEmojiURL(surrogate)
+        }
         : {
-            type: 'text',
-            content: match
-          }
+          type: 'text',
+          content: match
+        }
     },
     react(node, recurseOutput, state) {
       return node.src ? (
@@ -308,12 +308,12 @@ const baseRules = {
     parse(capture, recurseParse, state) {
       return state.nested
         ? {
-            content: capture[0]
-          }
+          content: capture[0]
+        }
         : recurseParse(translateSurrogatesToInlineEmoji(capture[0]), {
-            ...state,
-            nested: true
-          })
+          ...state,
+          nested: true
+        })
     }
   },
   s: {
